@@ -1,0 +1,355 @@
+body { 
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+  span{
+    color:rgb(25, 25, 230);
+  }
+  .header {
+    overflow: hidden;
+    background-color: #000;
+    padding: 20px 10px;
+    border-bottom: 2px solid  rgb(225, 225, 236);
+  }
+  .header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  .nav-link:hover{
+    color:  rgb(25, 25, 230);
+  }
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .header-right {
+    float: right;
+  }
+  .nav-logo{
+    background: transparent;
+    color: white;
+    text-decoration: none;
+  }
+  .img{
+  width: 80%;
+
+  }
+.row1{
+    background-image: url(img.jpg);
+    background-size: cover;
+    padding-bottom: 10%;
+    padding-top: 20px;
+}
+div h1{
+  margin-left: 350px;
+  margin-top: 80px;
+  color: #000;
+  font-size: 40px;
+  font-family:'Times New Roman', Times, serif;
+}
+.btn1{
+  background-image: linear-gradient(to left, #12c8c4, #1e9ca0, #1258a8);
+  color: white;
+  font-size: 25px;
+  border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+  border: 1px solid white;
+  margin-left: 500px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.aboutimg{
+  border-radius: 30px;
+  border: 1px solid #000;
+  margin-top: 5px;
+  margin-left: 20px;
+  
+}
+p{
+  margin-left: 35px;
+  margin-top: 80px;
+  font-size: 20px;
+  font-weight: 200;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.btn2{
+  background-image: linear-gradient(to left, #12c8c4, #1e9ca0, #1258a8);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 10px 20px 10px 10px;
+  margin-left: 35px;
+  margin-top: 5px;
+  border: 3px solid #000;
+  cursor: pointer;
+}
+
+.container{
+  min-height: 100vh;
+  width: 100%;
+
+
+}
+.service{
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  
+}
+.back{
+  background-color: #191a2b; 
+  padding-top: 20px;
+}
+.service h1{
+  color: white;
+  font-size: 50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: transparent;
+    letter-spacing: 4px;
+    background:linear-gradient(8deg, rgba(8,52,83,1) 0%,rgba(0,230,173,1) 41% , rgba(41,17,45,1) 100%) ;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    position: relative;   
+}
+.service h1:after{
+content: "";
+position: absolute;
+top: 100%;
+width: 0%;
+left: 100%;
+height: 8px;
+border-radius: 8px;
+background-color: rgba(221, 27, 27, 0.05);
+}
+
+
+.service h1 span{
+  position: absolute;
+  top: 100%;
+  left: 5%;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #72e2ae;
+  animation: anim 5s linear infinite;
+}
+
+@keyframes anim{
+  95%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    left:35%;
+  }
+}
+
+.cards{
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card{
+  height: 350px;
+  width: 370px;
+  background-color: #1c2335;
+  padding: 3% 8%;
+  border: 0.2px solid rgba(114,226,174,0.2);
+  border-radius: 8px;
+  margin-left: 25px;
+  transition: .6s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.card::after{
+content: "";
+position: absolute;
+top: 150%;
+left: -200px;
+width: 120%;
+transform: rotate(50deg);
+background-color: #fff;
+height: 18px;
+filter: blur(30px);
+opacity: 0.5;
+transition: 1s;
+}
+.card:hover::after{
+width: 225%;
+top: -100%;
+}
+
+.card i{
+  color: #72e2ae;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+.card h2{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card p{
+  text-align: center;
+  width: 100%;
+  margin: 12px 0;
+  color: rgba(255 , 255,255,0.6);
+}
+.card:hover{
+  background-color: transparent;
+  transform: translateY(-8px);
+  border-color: #00ff37;
+}
+.card:hover i{
+  color: #1258a8;
+}
+
+
+
+.footer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background: #000;
+  border-radius: 6px;
+  margin-top: 115%;
+}
+
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 30px;
+}
+
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.footer-col .links {
+  margin-top: 20px;
+}
+
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+  text-decoration: none;
+  color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+  color: #fff;
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: #bfbfbf;
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid #7489C6 ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: #ccc;
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: #cecccc;
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: #afb6c7;
+}
+
+.footer-col .icons i:hover  {
+  color: #fff;
+}
+
+/* @media screen and (max-width:1200px) {
+  .cards{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media screen and (max-width:1200px) {
+  .cards{
+    grid-template-columns: repeat(1,1fr);
+  }
+  h1{
+    font-size: 3.5rem;
+  }
+} */
